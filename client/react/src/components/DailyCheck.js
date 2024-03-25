@@ -7,7 +7,7 @@ import refreshPage from "../services/refresh";
 const DailyCheck = () => {
   const [tasks, setTasks] = useState([]);
   const [tasksDone, setTasksDone] = useState([]);
-  const [points, setPoints] = useState(0);
+  const [points, setPoints] = useState("");
 
   const date = getDate();
   const timestamp = getTimestamp();
@@ -15,7 +15,7 @@ const DailyCheck = () => {
   const createData = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3002/api/tasks/create",
+        "http://localhost:3002/api/dailycheck/create",
         {
           date: date,
           tasks: tasksDone,
@@ -23,6 +23,7 @@ const DailyCheck = () => {
           timestamp: timestamp,
         }
       );
+
       console.log(response.data);
       refreshPage();
     } catch (error) {
@@ -43,7 +44,7 @@ const DailyCheck = () => {
     const totalPoints = tasksDone.reduce((acc, currentItem) => {
       return acc + Number(currentItem.points);
     }, 0);
-    console.log(totalPoints)
+    console.log(totalPoints);
     setPoints(totalPoints);
   };
 
@@ -75,8 +76,8 @@ const DailyCheck = () => {
 
         <button
           onClick={() => {
-            getTotalPoints()
-            createData()
+            getTotalPoints();
+            createData();
           }}
         >
           log
