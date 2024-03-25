@@ -1,4 +1,6 @@
-import "./styles/DailyCheck.css";import "./styles/AddTask.css";
+import "./styles/ScoreCard.css";
+import "./styles/DailyCheck.css";
+import "./styles/AddTask.css";
 import "./styles/PointCalc.css";
 import React from "react";
 import Home from "./pages/Home";
