@@ -75,8 +75,8 @@ const DailyCheck = () => {
 
         <button
           onClick={() => {
-            console.log(tasksDone);
             getTotalPoints()
+            createData()
           }}
         >
           log
