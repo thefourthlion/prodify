@@ -9,7 +9,7 @@ const AddTask = () => {
 
   const [tasks, setTasks] = useState([]);
 
-  const submit = async () => {
+  const createData = async () => {
     try {
       const response = await axios.post(
         "http://localhost:3002/api/tasks/create",
@@ -35,7 +35,7 @@ const AddTask = () => {
     }
   };
 
-  const deleteItem = async (id) => {
+  const deleteData = async (id) => {
     try {
       await axios.delete(`http://localhost:3002/api/tasks/delete/${id}`);
       console.log("Deleted Item");
@@ -55,7 +55,7 @@ const AddTask = () => {
     <div className="AddTask">
       <div className="container">
         <h1 className="content-header">AddTask</h1>
-        {/* <form onSubmit={submit}> */}
+        {/* <form onSubmit={createData}> */}
           <input
             placeholder="task"
             type="text"
@@ -78,7 +78,7 @@ const AddTask = () => {
             Current Timestamp: <b>{timestamp}</b>
           </p>
           <button onClick={()=>{
-            submit()
+            createData()
           }} type="submit">Submit</button>
         {/* </form> */}
         {tasks.map((task) => (
@@ -87,7 +87,7 @@ const AddTask = () => {
               {task.task} | {task.points} points{" "}
               <span
                 onClick={() => {
-                  deleteItem(task._id);
+                  deleteData(task._id);
                 }}
               >
                 ⛔

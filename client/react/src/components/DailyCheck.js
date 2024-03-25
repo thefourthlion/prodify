@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import getDate from "../services/date";
 const DailyCheck = () => {
     const [tasks, setTasks] = useState([]);
     const [tasksDone, setTasksDone] = useState([]);
