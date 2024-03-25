@@ -2,8 +2,10 @@ const mongoose = require("mongoose");
 const DailyCheckSchema = new mongoose.Schema(
   {
     date: { type: String, required: [true, "Please provide date"] },
-    tasks: { type: [String], required: [true, "Please provide tasks"] },
-    points: { type: String, required: [true, "Please provide points"] },
+    tasks: [{
+      task: { type: String, required: [true, "Please provide task"] },
+      points: { type: String, required: [true, "Please provide points"] },
+    }],    points: { type: String, required: [true, "Please provide points"] },
     timestamp: { type: String, required: [true, "Please provide timestamp"] },
   },
   { timestamps: true }
