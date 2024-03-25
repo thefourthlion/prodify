@@ -1,7 +1,6 @@
 const Tasks = require("../models/Tasks");
 exports.createTasks = async (req, res) => {
-  const page = req.query.page || 0;
-  const limit = req.query.limit || 25;
+
   try {
     let newTasks = new Tasks({
       task: req.body.task,
@@ -15,6 +14,8 @@ exports.createTasks = async (req, res) => {
   }
 };
 exports.readTasks = async (req, res) => {
+  const page = req.query.page || 0;
+  const limit = req.query.limit || 25;
   try {
     Tasks.find({}, (err, result) => {
       if (err) {

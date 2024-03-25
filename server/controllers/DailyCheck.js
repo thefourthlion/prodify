@@ -1,7 +1,6 @@
 const DailyCheck = require("../models/DailyCheck");
 exports.createDailyCheck = async (req, res) => {
-  const page = req.query.page || 0;
-  const limit = req.query.limit || 25;
+  
   try {
     let newDailyCheck = new DailyCheck({
       date: req.body.date,
@@ -16,6 +15,8 @@ exports.createDailyCheck = async (req, res) => {
   }
 };
 exports.readDailyCheck = async (req, res) => {
+  const page = req.query.page || 0;
+  const limit = req.query.limit || 25;
   try {
     DailyCheck.find({}, (err, result) => {
       if (err) {
