@@ -1,0 +1,1 @@
+const mongoose = require("mongoose"); const DailyCheckSchema = new mongoose.Schema( {date: { type: String, required: [true, "Please provide date"],  },doneTasks: { type: String, required: [true, "Please provide doneTasks"],  }, }, { timestamps: true } ); const DailyCheck = mongoose.model("DailyCheck", DailyCheckSchema); module.exports = DailyCheck;
