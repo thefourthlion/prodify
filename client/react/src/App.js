@@ -3,9 +3,10 @@ import "./styles/ScoreCard.css";
 import "./styles/DailyCheck.css";
 import "./styles/AddTask.css";
 import "./styles/PointCalc.css";
-import AddTask from "./components/AddTask";
-import ScoreCard from "./components/ScoreCard";
-import DailyCheck from "./components/DailyCheck";
+import "./styles/globals.css"
+import AddTask from "./pages/AddTask";
+import ScoreCard from "./pages/ScoreCard";
+import DailyCheck from "./pages/DailyCheck";
 import Navigation from "./components/Navigation";
 import React from "react";
 import Home from "./pages/Home";

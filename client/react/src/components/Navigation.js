@@ -46,7 +46,7 @@ export default function Navigation() {
           )}
         </li>
       </ul>
-      <h1 className="nav-title">Speed Tests</h1>
+      <h1 className="nav-title">Prodify</h1>
       <div className="burger" onClick={() => setShowLinks(!showLinks)}>
         <div className="line1"></div>
         <div className="line2"></div>

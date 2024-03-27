@@ -52,7 +52,7 @@ const AddTask = () => {
   }, []);
 
   return (
-    <div className="AddTask">
+    <div className="AddTask page">
       <div className="container">
         <h1 className="content-header">AddTask</h1>
         {/* <form onSubmit={createData}> */}

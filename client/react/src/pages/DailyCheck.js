@@ -53,7 +53,7 @@ const DailyCheck = () => {
   }, []);
 
   return (
-    <div className="DailyCheck">
+    <div className="DailyCheck page" >
       <div className="container">
         <h1 className="content-header">DailyCheck</h1>
 

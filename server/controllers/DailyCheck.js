@@ -1,6 +1,5 @@
 const DailyCheck = require("../models/DailyCheck");
 exports.createDailyCheck = async (req, res) => {
-  
   try {
     let newDailyCheck = new DailyCheck({
       date: req.body.date,
@@ -24,7 +23,7 @@ exports.readDailyCheck = async (req, res) => {
       }
       res.send(result);
     })
-      .sort()
+      .sort({ createdAt: -1 })
       .skip(page * limit)
       .limit(limit);
   } catch (err) {
