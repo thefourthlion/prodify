@@ -17,57 +17,58 @@ const ScoreCard = () => {
       const data = response.data[0];
       setDailyData(response.data);
       setDailyScore(data.points);
+      await getTotalPossibleScore();
     } catch (error) {
       console.error("Error Fetching Data", error);
     }
   };
 
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const getTotalPossibleScore = async () => {
     try {
       const response = await axios.get("http://localhost:3002/api/tasks/read");
       const data = response.data;
-      const total = data.reduce((acc, curr) => {
-        return acc + parseFloat(curr.points);
-      }, 0);
-      setTotalPossibleScore(total.toString());
+      const total = data.reduce(
+        (acc, curr) => acc + parseFloat(curr.points),
+        0
+      );
+      setTotalPossibleScore(total.toString(), calculateScorePercentageAndGrade);
     } catch (error) {
       console.error("Error Fetching Data", error);
     }
   };
 
   const calculateScorePercentageAndGrade = () => {
-    console.log('Daily Score:', dailyScore); // Debugging
-    console.log('Total Possible Score:', totalPossibleScore); // Debugging
-  
-    // Convert both dailyScore and totalPossibleScore to numbers
     const daily = parseFloat(dailyScore);
     const total = parseFloat(totalPossibleScore);
-  
-    console.log('Parsed Daily:', daily); // Further Debugging
-    console.log('Parsed Total:', total); // Further Debugging
-  
+
     if (isNaN(daily) || isNaN(total)) {
-      console.error("Invalid input: dailyScore or totalPossibleScore is not a number.");
+      console.error(
+        "Invalid input: dailyScore or totalPossibleScore is not a number."
+      );
       setScorePercentage("0");
       setScoreGrade("F");
       return;
     }
-  
+
     if (total > 0) {
       const percentage = Math.round((daily / total) * 100);
       setScorePercentage(percentage.toString());
-  
+
       let grade;
       if (percentage >= 90) {
-        grade = 'A';
+        grade = "A";
       } else if (percentage >= 80) {
-        grade = 'B';
+        grade = "B";
       } else if (percentage >= 70) {
-        grade = 'C';
+        grade = "C";
       } else if (percentage >= 60) {
-        grade = 'D';
+        grade = "D";
       } else {
-        grade = 'F';
+        grade = "F";
       }
       setScoreGrade(grade);
     } else {
@@ -76,17 +77,12 @@ const ScoreCard = () => {
       setScoreGrade("F");
     }
   };
-  
+
   useEffect(() => {
-    const init = async () => {
-      await fetchData();
-      await getTotalPossibleScore();
+    if (dailyScore && totalPossibleScore) {
       calculateScorePercentageAndGrade();
-    };
-  
-    init().catch(console.error);
-  }, []);
-  
+    }
+  }, [dailyScore, totalPossibleScore]);
 
   return (
     <div className="ScoreCard page">
@@ -113,4 +109,5 @@ const ScoreCard = () => {
     </div>
   );
 };
+
 export default ScoreCard;
