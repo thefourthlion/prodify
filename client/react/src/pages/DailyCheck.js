@@ -53,7 +53,7 @@ const DailyCheck = () => {
   }, []);
 
   return (
-    <div className="DailyCheck page" >
+    <div className="DailyCheck page">
       <div className="container">
         <h1 className="content-header">DailyCheck</h1>
 
@@ -77,10 +77,19 @@ const DailyCheck = () => {
         <button
           onClick={() => {
             getTotalPoints();
+          }}
+        >
+          Calculate Score
+        </button>
+
+        <br/>
+
+        <button
+          onClick={() => {
             createData();
           }}
         >
-          log
+          Submit
         </button>
 
         <h1>{points}</h1>
