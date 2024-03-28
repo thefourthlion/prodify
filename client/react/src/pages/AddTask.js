@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import getTimestamp from "../services/timestamp";
 import axios from "axios";
 import refreshPage from "../services/refresh";
+import FloatingLabel from "react-bootstrap/FloatingLabel";
+import Form from "react-bootstrap/Form";
+
 const AddTask = () => {
   const [task, setTask] = useState("");
-  const [points, setPoints] = useState(0);
+  const [points, setPoints] = useState();
   const timestamp = getTimestamp();
 
   const [tasks, setTasks] = useState([]);
@@ -45,7 +48,10 @@ const AddTask = () => {
     }
   };
 
-  const totalPoints = tasks.reduce((total, task) => total + parseFloat(task.points, 10), 0);
+  const totalPoints = tasks.reduce(
+    (total, task) => total + parseFloat(task.points, 10),
+    0
+  );
 
   useEffect(() => {
     fetchData();
@@ -55,32 +61,46 @@ const AddTask = () => {
     <div className="AddTask page">
       <div className="container">
         <h1 className="content-header">AddTask</h1>
-        {/* <form onSubmit={createData}> */}
-          <input
-            placeholder="task"
+
+        <FloatingLabel className="form-label" label="Task">
+          <Form.Control
+            className="form-input"
             type="text"
+            placeholder="Task"
+            value={task}
             onChange={(e) => {
               setTask(e.target.value);
             }}
-          ></input>
+          />
+        </FloatingLabel>
 
-          <br />
+        <br />
 
-          <input
-            placeholder="points"
+        <FloatingLabel className="form-label" label="Points">
+          <Form.Control
+            className="form-input"
             type="text"
+            placeholder="Points"
+            value={points}
             onChange={(e) => {
               setPoints(e.target.value);
             }}
-          ></input>
-          <h1>{task}</h1>
-          <p>
-            Current Timestamp: <b>{timestamp}</b>
-          </p>
-          <button onClick={()=>{
-            createData()
-          }} type="submit">Submit</button>
-        {/* </form> */}
+          />
+        </FloatingLabel>
+
+        <h1>{task}</h1>
+        <p>
+          Current Timestamp: <b>{timestamp}</b>
+        </p>
+        <button
+          onClick={() => {
+            createData();
+          }}
+          type="submit"
+        >
+          Submit
+        </button>
+
         {tasks.map((task) => (
           <div key={task._id}>
             <p>

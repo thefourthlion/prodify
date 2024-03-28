@@ -1,3 +1,20 @@
+@import "./Variables.scss";
+
+body{
+    background-color: $primary-background !important;
+    color: $white !important;
+
+    input{
+        background-color: $secondary-background !important;
+        border-color: $secondary-background;
+        border-radius: 5px;
+        color: $white !important;
+    }
+
+    
+    
+}
+
 .Home{}
 
 .page{

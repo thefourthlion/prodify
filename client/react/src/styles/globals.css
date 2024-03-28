@@ -1,3 +1,14 @@
+body {
+  background-color: #171717 !important;
+  color: #FFFFFF !important;
+}
+body input {
+  background-color: #212121 !important;
+  border-color: #212121;
+  border-radius: 5px;
+  color: #FFFFFF !important;
+}
+
 .page {
   padding-top: 100px;
 }/*# sourceMappingURL=globals.css.map */
