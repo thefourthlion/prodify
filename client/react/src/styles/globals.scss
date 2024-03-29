@@ -11,6 +11,19 @@ body{
         color: $white !important;
     }
 
+    .form-input:focus {
+        border-color: $white;
+        box-shadow: none;
+        outline: 0 none;
+      }
+
+    
+ 
+ 
+
+    .form-label:focus{
+        color: green !important;
+      }
     
     
 }

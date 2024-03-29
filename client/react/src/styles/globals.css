@@ -8,6 +8,14 @@ body input {
   border-radius: 5px;
   color: #FFFFFF !important;
 }
+body .form-input:focus {
+  border-color: #FFFFFF;
+  box-shadow: none;
+  outline: 0 none;
+}
+body .form-label:focus {
+  color: green !important;
+}
 
 .page {
   padding-top: 100px;
