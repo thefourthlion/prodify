@@ -15,11 +15,32 @@ body{
         border-color: $white;
         box-shadow: none;
         outline: 0 none;
+        box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
       }
 
-    
+
+
+      button{
+        width: 150px;
+        height: 50px;
+        border: 1px solid $white;
+        border-radius: 5px;
+        background-color: $secondary-background;
+        color: $white;
+      }
+
+      button:hover {
+        box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+      }
+
+      label::after {
+        background-color: $secondary-background !important;
+        color: $white !important;
+      }
  
- 
+      .form-label > label {
+        color: $white !important;
+      }
 
     .form-label:focus{
         color: green !important;

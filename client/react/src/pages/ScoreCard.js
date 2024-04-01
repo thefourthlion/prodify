@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import getDate from "../services/date";
+import ScoreCardChart from "../components/ScoreCardChart";
 const ScoreCard = () => {
   const [dailyScore, setDailyScore] = useState("");
   const [dailyData, setDailyData] = useState([]);
@@ -105,6 +106,8 @@ const ScoreCard = () => {
             )}
           </div>
         ))}
+
+        <ScoreCardChart/>
       </div>
     </div>
   );

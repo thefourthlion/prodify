@@ -1,3 +1,4 @@
+import "./styles/ScoreCardChart.css";
 import "./styles/Navigation.css";
 import "./styles/ScoreCard.css";
 import "./styles/DailyCheck.css";
