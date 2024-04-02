@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"ScoreCard.css"}
+{"version":3,"sources":["ScoreCard.scss","ScoreCard.css"],"names":[],"mappings":"AAEI;EACI,aAAA;EACA,sBAAA;ACDR;ADII;EACI,aAAA;EACA,8BAAA;ACFR","file":"ScoreCard.css"}

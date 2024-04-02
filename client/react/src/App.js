@@ -1,10 +1,12 @@
+import "./styles/ScoreCardDaily.css";
+import "./styles/ScoreCardWeeklyAvg.css";
 import "./styles/ScoreCardChart.css";
 import "./styles/Navigation.css";
 import "./styles/ScoreCard.css";
 import "./styles/DailyCheck.css";
 import "./styles/AddTask.css";
 import "./styles/PointCalc.css";
-import "./styles/globals.css"
+import "./styles/globals.css";
 import AddTask from "./pages/AddTask";
 import ScoreCard from "./pages/ScoreCard";
 import DailyCheck from "./pages/DailyCheck";
@@ -13,6 +15,7 @@ import React from "react";
 import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 const App = () => {
   return (
     <div className="App">

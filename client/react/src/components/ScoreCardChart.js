@@ -7,14 +7,13 @@ const ScoreCardChart = () => {
 
   const fetchData = async () => {
     try {
-      // Remove the limit parameter to fetch all records
       const response = await axios.get("http://localhost:3002/api/dailycheck/read");
       const formattedData = response.data.map((item, index) => ({
-        // Use date as the name or a simple index if date is not unique or not provided
         name: item.date || `Record ${index + 1}`,
-        points: parseInt(item.points, 10), // Convert points to a number
+        points: parseInt(item.points, 10),
       }));
-      setPointsData(formattedData);
+      // Reverse the data array
+      setPointsData(formattedData.reverse());
     } catch (error) {
       console.error("Error Fetching Data", error);
     }

@@ -1,1 +1,8 @@
-/*# sourceMappingURL=ScoreCard.css.map */
+.ScoreCard .score-container {
+  display: flex;
+  flex-direction: column;
+}
+.ScoreCard .score-cont {
+  display: flex;
+  flex-direction: row !important;
+}/*# sourceMappingURL=ScoreCard.css.map */
