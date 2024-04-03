@@ -1,14 +1,33 @@
 @import "./Variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body{
     background-color: $primary-background !important;
     color: $white !important;
-
+    font-family: "Poppins", sans-serif !important;
+    h1{
+      color: $primary-pink;
+      text-align: center !important;
+    }
     input{
         background-color: $secondary-background !important;
         border-color: $secondary-background;
         border-radius: 5px;
         color: $white !important;
+    }
+
+    .score-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
     .form-input:focus {
@@ -43,7 +62,7 @@ body{
       }
 
     .form-label:focus{
-        color: green !important;
+        color: $primary-pink !important;
       }
     
     

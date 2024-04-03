@@ -89,23 +89,25 @@ const AddTask = () => {
         </FloatingLabel>
 
         <h1>{task}</h1>
-        <p>
-          Current Timestamp: <b>{timestamp}</b>
-        </p>
+        
         <button
           onClick={() => {
             createData();
           }}
           type="submit"
+          className="button"
         >
           Submit
         </button>
+
+        <div className="task-container">
 
         {tasks.map((task) => (
           <div key={task._id}>
             <p>
               {task.task} | {task.points} points{" "}
               <span
+              className="delete-btn"
                 onClick={() => {
                   deleteData(task._id);
                 }}
@@ -116,7 +118,8 @@ const AddTask = () => {
           </div>
         ))}
 
-        <p>{totalPoints}</p>
+        <h1>Points: {totalPoints}</h1>
+        </div>
       </div>
     </div>
   );

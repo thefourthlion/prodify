@@ -1,1 +1,11 @@
-.AddTask{}
+.AddTask {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .delete-btn{
+    cursor: pointer;
+  }
+}

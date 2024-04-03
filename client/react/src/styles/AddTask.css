@@ -1,1 +1,9 @@
-/*# sourceMappingURL=AddTask.css.map */
+.AddTask .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.AddTask .delete-btn {
+  cursor: pointer;
+}/*# sourceMappingURL=AddTask.css.map */

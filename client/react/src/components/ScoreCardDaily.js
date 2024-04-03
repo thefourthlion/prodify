@@ -87,19 +87,19 @@ const ScoreCardDaily = () => {
 
   return (
     <div className="ScoreCardDaily">
-      <div className="container">
+      <div className="score-container">
         
           <h1 className="content-header">Daily Score</h1>
           {dailyData.map((data) => (
             <div>
               {data.date == date ? (
                 <div>
-                  <h1>
+                  <h3>
                     {data.points}/{totalPossibleScore}
-                  </h1>
-                  <h1>
+                  </h3>
+                  <h3>
                     {scoreGrade} - {scorePercentage}%
-                  </h1>
+                  </h3>
                 </div>
               ) : (
                 <h1>No Entry For Today</h1>

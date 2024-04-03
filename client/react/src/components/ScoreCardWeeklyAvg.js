@@ -89,12 +89,12 @@ const ScoreCardWeeklyAvg = () => {
 
   return (
     <div className="ScoreCardWeeklyAvg">
-      <div className="container">
+      <div className="score-container">
         <h1 className="content-header">Weekly Score</h1>
         {weeklyScores.length > 0 ? (
           <div>
-            <h1>{calculateWeeklyAverage()}/{totalPossibleScore}</h1>
-            <h1>{scoreGrade} - {scorePercentage}%</h1>
+            <h3>{calculateWeeklyAverage()}/{totalPossibleScore}</h3>
+            <h3>{scoreGrade} - {scorePercentage}%</h3>
           </div>
         ) : (
           <h1>No Entries For This Week</h1>

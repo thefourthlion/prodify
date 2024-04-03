@@ -55,7 +55,8 @@ const DailyCheck = () => {
   return (
     <div className="DailyCheck page">
       <div className="container">
-        <h1 className="content-header">DailyCheck</h1>
+        <div className="daily-check-container">
+        <h1 className="content-header">Daily Check</h1>
 
         {tasks.map((task) => (
           <div key={task._id}>
@@ -73,6 +74,8 @@ const DailyCheck = () => {
             </p>
           </div>
         ))}
+
+        <div className="button-container">
 
         <button
           onClick={() => {
@@ -93,6 +96,8 @@ const DailyCheck = () => {
         </button>
 
         <h1>{points}</h1>
+        </div>
+        </div>
       </div>
     </div>
   );

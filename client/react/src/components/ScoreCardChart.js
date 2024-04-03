@@ -25,14 +25,14 @@ const ScoreCardChart = () => {
 
   return (
     <div className="ScoreCardChart">
-      <div className="container">
+      <div className="score-container">
         <h1 className="content-header">Score Card Chart</h1>
 
         <LineChart width={500} height={300} data={pointsData}>
-          <XAxis dataKey="name" />
-          <YAxis allowDecimals={false} />
+          <XAxis stroke="rgb(226, 228, 235)" dataKey="name" />
+          <YAxis stroke="rgb(226, 228, 235)" allowDecimals={false} />
           <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
-          <Line type="monotone" dataKey="points" stroke="#8884d8" />
+          <Line type="monotone" dataKey="points" stroke="#d479cb" />
           <Tooltip />
         </LineChart>
       </div>

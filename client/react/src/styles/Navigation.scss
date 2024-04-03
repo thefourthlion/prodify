@@ -13,7 +13,7 @@
   width: 100vw;
 
   a {
-    color: $primary;
+    color: $primary-pink;
   }
 
   .burger {
@@ -44,8 +44,19 @@
     padding: 0;
     margin: 0;
   }
+
+  .button{
+    background-color: $primary-pink;
+    border-color: $primary-pink;
+  }
+
+  .button:hover{
+    background-color: $primary-dark-pink;
+    border-color: $primary-dark-pink;
+
+  }
   li {
-    font-size: $md-font;
+    font-size: 32px;
     padding: 20px;
     flex-direction: row;
   }
@@ -56,7 +67,7 @@
 
   .nav-item {
     a:hover {
-      color: $primary;
+      color: $primary-pink;
     }
     a::before {
       content: "";
@@ -65,7 +76,7 @@
       width: 100%;
       height: 3px;
       top: 40px;
-      background-color: $primary;
+      background-color: $primary-pink;
       transform: scaleX(0);
       transition: transform 0.3s ease;
     }
