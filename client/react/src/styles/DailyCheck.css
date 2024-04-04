@@ -1,3 +1,15 @@
+.DailyCheck .input-container {
+  display: flex;
+  gap: 15px;
+}
+.DailyCheck .checkbox {
+  width: 25px;
+  height: auto;
+}
+.DailyCheck h4 {
+  position: relative;
+  top: 5px;
+}
 .DailyCheck .container {
   display: flex;
   flex-direction: column;
@@ -13,6 +25,7 @@
   text-align: left;
 }
 .DailyCheck .button-container {
+  margin-top: 25px;
   display: flex;
   gap: 10px;
   flex-direction: column;

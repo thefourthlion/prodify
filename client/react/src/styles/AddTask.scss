@@ -5,6 +5,18 @@
     justify-content: center;
     align-items: center;
   }
+
+  button{
+    width: 330px;
+  }
+
+  .task-container{
+    padding-top: 25px;
+  }
+
+  .points-header{
+    padding-top: 25px;
+  }
   .delete-btn{
     cursor: pointer;
   }

@@ -59,9 +59,10 @@ const DailyCheck = () => {
         <h1 className="content-header">Daily Check</h1>
 
         {tasks.map((task) => (
-          <div key={task._id}>
-            <p>
+          <div className="input-container" key={task._id}>
+            
               <input
+              className="checkbox"
                 type="checkbox"
                 onClick={() => {
                   setTasksDone([
@@ -70,8 +71,8 @@ const DailyCheck = () => {
                   ]);
                 }}
               />
-              {task.task} | {task.points} points{" "}
-            </p>
+              <h4>{task.task} | {task.points} points{" "}</h4>
+            
           </div>
         ))}
 

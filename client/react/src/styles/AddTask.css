@@ -4,6 +4,15 @@
   justify-content: center;
   align-items: center;
 }
+.AddTask button {
+  width: 330px;
+}
+.AddTask .task-container {
+  padding-top: 25px;
+}
+.AddTask .points-header {
+  padding-top: 25px;
+}
 .AddTask .delete-btn {
   cursor: pointer;
 }/*# sourceMappingURL=AddTask.css.map */

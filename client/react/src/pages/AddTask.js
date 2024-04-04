@@ -104,7 +104,7 @@ const AddTask = () => {
 
         {tasks.map((task) => (
           <div key={task._id}>
-            <p>
+            <h4>
               {task.task} | {task.points} points{" "}
               <span
               className="delete-btn"
@@ -114,11 +114,11 @@ const AddTask = () => {
               >
                 ⛔
               </span>
-            </p>
+            </h4>
           </div>
         ))}
 
-        <h1>Points: {totalPoints}</h1>
+        <h1 className="points-header">Points: {totalPoints}</h1>
         </div>
       </div>
     </div>
